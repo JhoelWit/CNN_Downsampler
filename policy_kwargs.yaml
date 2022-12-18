@@ -1,0 +1,22 @@
+policy_kwargs:
+  policy:
+    features:
+      activ: tanh
+      hidden: 250
+      output: 200
+    cnn:
+      activ: tanh
+      output_channels: 5
+      conv_kernel: 3
+      conv_stride: 1
+      pool_kernel: 2
+      pool_stride: 2
+      output: 300
+    activ: tanh
+    latent: 150
+
+  value:
+    activ: tanh
+    bias: False
+    hidden: 250
+    latent: 1
