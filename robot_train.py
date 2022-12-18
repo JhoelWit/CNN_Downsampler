@@ -58,7 +58,7 @@ if __name__ == "__main__":
     with open('policy_kwargs.yaml', 'r') as file:
             policy_kwargs = yaml.safe_load(file)
 
-
+    # Your project information goes here
     run = wandb.init(project="bayes_swarm_T-RO", 
                 entity="jhoelwit",
                 sync_tensorboard=True,
