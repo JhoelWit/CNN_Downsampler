@@ -4,7 +4,7 @@ import numpy as np
 class Sampler():
     def __init__(self, sample_cap, velocity=0.1):
         self.sample_cap = sample_cap
-        self.velocity = velocity
+        self.velocity_mps = velocity
 
     def reset(self, source):
         """
@@ -58,7 +58,7 @@ class Sampler():
         # Generate random headings for the *robots* to travel
         random_headings = np.random.uniform(-1.0, 1.0, size=(obs_sample_size, 2))
         movement_time = np.random.uniform()
-        dist_traveled = movement_time * self.velocity
+        dist_traveled = movement_time * self.velocity_mps
 
         new_obs = old_points[:, :2] + random_headings * dist_traveled
 
