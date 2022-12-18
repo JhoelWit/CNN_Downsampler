@@ -1,0 +1,7 @@
+gym==0.21.0
+numpy==1.21.6
+PyYAML==6.0
+scikit_learn==1.2.0
+scipy==1.7.3
+stable_baselines3==1.6.2
+torch==1.10.0+cu113
